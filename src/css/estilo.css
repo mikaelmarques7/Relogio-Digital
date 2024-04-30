@@ -1,0 +1,91 @@
+:root {
+    --color-dark: #000000;
+    --color-white: #fff;
+    --color-light: #ababab;
+    --color-purple: #5d15a5;
+}
+
+* {
+    color: var(--color-white);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right top, #0e0495, #20097b, #240e63, #24104c, #201236, #24143a, #29173d, #2d1941, #3f1c60, #521c7f, #6617a0, #7d07c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cabecalho{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    display: flex;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px 40px;
+    margin: 50px 0 100px;
+    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.5);
+    
+}
+
+.clock {
+    display: flex;
+    gap: 40px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.clock span {
+    font-size: 150px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.clock span:not(:last-child):after {
+    content: ":";
+    margin-bottom: 25px;
+    ;
+    color: var(--color-light);
+}
+
+h2 strong {
+    color: yellow;
+}
+
+@media (max-width: 600px) {
+    .clock {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .clock span {
+        font-size: 40px;
+        gap: 10px;
+    }
+
+    .clock span:not(:last-child):after {
+        margin-bottom: 0;
+    }
+
+    h2 {
+
+        font-size: 20px;
+
+    }
+}
